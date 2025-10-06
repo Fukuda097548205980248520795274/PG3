@@ -2,7 +2,7 @@
 #include <Windows.h>
 
 /// <summary>
-/// 時給計算
+/// 一般的な時給計算
 /// </summary>
 /// <param name="hourlyWage">時給</param>
 /// <param name="hour">時</param>
@@ -44,16 +44,37 @@ int main()
 	// 時給
 	int32_t hourlyWage = 1226;
 
-	// 最初の賃金
+	// 最初の時給
 	int32_t startWage = 100;
+
 
 	// 時間
 	int32_t hour = 8;
 
+	// 合計賃金
+	int32_t sumHourlyWage = HourlyWages(hourlyWage, hour);
+	int32_t sumRecursiveWage = RecursiveWages(startWage, hour);
 
-	// 5時間働いたとき
-	printf("働いた時間 : %d , 合計賃金 : %d \n", hour, HourlyWages(hourlyWage, hour));
-	printf("働いた時間 : %d , 合計賃金 : %d \n", hour, RecursiveWages(startWage, hour));
+
+	// 合計賃金を出力する
+	printf("一般的な時給計算の合計 : %d \n", sumHourlyWage);
+	printf("再帰的な時給計算の合計 : %d \n", sumRecursiveWage);
+
+	printf("\n");
+
+	// 合計賃金を比べる
+	if (sumHourlyWage < sumRecursiveWage)
+	{
+		printf("再帰的な時給計算が儲かる \n");
+	}
+	else if(sumHourlyWage > sumRecursiveWage)
+	{
+		printf("一般的な時給計算が儲かる \n");
+	}
+	else
+	{
+		printf("同じ賃金 \n");
+	}
 
 	return 0;
 }
