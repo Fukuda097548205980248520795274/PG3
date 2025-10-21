@@ -10,7 +10,7 @@
 /// <param name="delayMs">待機時間</param>
 /// <param name="roll">サイコロの出目</param>
 /// <param name="userGuess">ユーザの入力</param>
-void DelayReveal(void (*fn)(int, int), uint32_t delayMs, int roll, int userGuess)
+void DelayReveal(void (*fn)(int, int), unsigned int delayMs, int roll, int userGuess)
 {
 	// 待機する
 	Sleep(delayMs);
@@ -61,7 +61,7 @@ int main()
 	SetConsoleOutputCP(65001);
 
 	// 乱数のシード設定
-	srand(static_cast<uint32_t>(time(NULL)));
+	srand(static_cast<unsigned int>(time(NULL)));
 
 	// 入力値
 	int inputValue = 0;
