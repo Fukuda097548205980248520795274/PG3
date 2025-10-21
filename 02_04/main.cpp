@@ -10,7 +10,7 @@ int main()
 	SetConsoleOutputCP(65001);
 
 	// 乱数のシード設定
-	srand(static_cast<uint32_t>(time(NULL)));
+	srand(static_cast<unsigned int>(time(NULL)));
 
 	// 遅延実行関数
 	auto delayReveal = [](void(*fn)(int, int), unsigned int delayMs, int roll, int userGuess)
