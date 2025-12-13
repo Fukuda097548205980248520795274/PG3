@@ -34,8 +34,7 @@ void ShowResult(int roll, int userGuess)
 		if (userGuess == 1)
 		{
 			printf("正解 \n");
-		}
-		else
+		} else
 		{
 			printf("不正解 \n");
 		}
@@ -69,7 +68,7 @@ int main()
 	// サイコロの出目
 	int roll = rand() % 6 + 1;
 
-	
+
 	printf("丁(偶数) と 半(奇数) を当てるゲーム　\n");
 	printf("丁 => 0 , 半 => 1 : ");
 	scanf_s("%d", &inputValue);
