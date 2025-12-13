@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include <Windows.h>
 #include <list>
 
@@ -9,9 +10,9 @@ int main()
 
 
 	/*-------------------
-	    1970年の山手線
+		1970年の山手線
 	-------------------*/
-	
+
 	std::list<const char*> yamanoteLineList;
 	yamanoteLineList.push_back("Tokyo");
 	yamanoteLineList.push_back("Kanda");
@@ -53,7 +54,7 @@ int main()
 
 
 	/*-------------------
-	    2019年の山手線
+		2019年の山手線
 	-------------------*/
 
 	// 西日暮里を差し込む
@@ -77,7 +78,7 @@ int main()
 
 
 	/*-----------------
-	    2022の山手線
+		2022の山手線
 	-----------------*/
 
 	// 高輪ゲートウェイを差し込む
@@ -85,7 +86,7 @@ int main()
 	{
 		if (*itr == "Tamachi")
 		{
-			itr = yamanoteLineList.insert(itr, "Takanawa-Gateway");
+			itr = yamanoteLineList.insert(itr, "Takanawa Gateway");
 			++itr;
 			break;
 		}
