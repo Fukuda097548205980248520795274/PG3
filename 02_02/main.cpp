@@ -66,12 +66,10 @@ int main()
 	if (sumHourlyWage < sumRecursiveWage)
 	{
 		printf("再帰的な時給計算が儲かる \n");
-	}
-	else if(sumHourlyWage > sumRecursiveWage)
+	} else if (sumHourlyWage > sumRecursiveWage)
 	{
 		printf("一般的な時給計算が儲かる \n");
-	}
-	else
+	} else
 	{
 		printf("同じ賃金 \n");
 	}
