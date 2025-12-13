@@ -26,7 +26,7 @@ int main()
 
 
 	/*--------------------
-	    ファイル読み込み
+		ファイル読み込み
 	--------------------*/
 
 	// ファイルを読み込む
@@ -45,14 +45,14 @@ int main()
 	std::string word;
 
 	// カンマ区切りで取得する
-	while (std::getline(stream, word , ','))
+	while (std::getline(stream, word, ','))
 	{
 		studentIDs.push_back(word);
 	}
 
 
 	/*---------------------
-	    学籍番号順に並べる
+		学籍番号順に並べる
 	---------------------*/
 
 	// 昇順に並べ替え
