@@ -10,8 +10,7 @@ T Min(T value1, T value2)
 	if (value1 < value2)
 	{
 		return value1;
-	}
-	else
+	} else
 	{
 		return value2;
 	}
