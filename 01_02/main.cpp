@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include <algorithm>
 #include <Windows.h>
 #include <fstream>
