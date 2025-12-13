@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include <Windows.h>
 
 template <typename T>
