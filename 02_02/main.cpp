@@ -1,5 +1,6 @@
-#include <iostream>
 #include <Windows.h>
+#include <stdio.h>
+#include <cstdint>
 
 /// <summary>
 /// 一般的な時給計算
