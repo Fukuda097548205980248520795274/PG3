@@ -7,7 +7,7 @@ class Comparison
 public:
 
 	// コンストラクタ
-	Comparison(T1 num1, T2 num2) : num1_(num1) , num2_(num2){}
+	Comparison(T1 num1, T2 num2) : num1_(num1), num2_(num2) {}
 
 	// 最小値を返却する
 	T Min() { return num1_ < num2_ ? static_cast<T>(num1_) : static_cast<T>(num2_); }
@@ -24,7 +24,7 @@ int main()
 	SetConsoleOutputCP(65001);
 
 	// int = int : int
-	Comparison<int,int,int>* comparison1 = new Comparison<int,int,int>(10,15);
+	Comparison<int, int, int>* comparison1 = new Comparison<int, int, int>(10, 15);
 	printf("%d \n", comparison1->Min());
 
 	// float = float : float
