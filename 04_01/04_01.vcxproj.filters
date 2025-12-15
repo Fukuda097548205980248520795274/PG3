@@ -14,11 +14,62 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class">
+      <UniqueIdentifier>{1d68c9a8-8d3b-487e-805e-81105fe51423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene">
+      <UniqueIdentifier>{4d69232f-d98f-465b-9bc9-aa0db8ac1b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IObject">
+      <UniqueIdentifier>{30aaa409-1e1f-41e8-8151-f47b50191779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IObject\Player">
+      <UniqueIdentifier>{d953ad3f-eba5-4fae-b0db-56c2c2b33dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IObject\Enemy">
+      <UniqueIdentifier>{1b348300-c6a6-4e8d-983e-b39455a1fbf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IObject\Bullet">
+      <UniqueIdentifier>{f4cad94f-919a-4a47-b24c-63389c66d4c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene\Title">
+      <UniqueIdentifier>{6a067529-62b4-4393-bbca-706c08eb7f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene\Stage">
+      <UniqueIdentifier>{8c93bf3b-2b9f-4d47-9885-76099303d23c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene\Clear">
+      <UniqueIdentifier>{6541ac5c-f7d9-4c9a-93ac-4be3584d5ca5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp">
       <Filter>KamataEngine\Adapter</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IObject\IObject.cpp">
+      <Filter>Class\IObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IObject\Enemy\Enemy.cpp">
+      <Filter>Class\IObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IObject\Bullet\Bullet.cpp">
+      <Filter>Class\IObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IObject\Player\Player.cpp">
+      <Filter>Class\IObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IScene\IScene.cpp">
+      <Filter>Class\IScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IScene\Title\Title.cpp">
+      <Filter>Class\IScene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IScene\Stage\Stage.cpp">
+      <Filter>Class\IScene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IScene\Clear\Clear.cpp">
+      <Filter>Class\IScene\Clear</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +153,30 @@
     </ClInclude>
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IObject\IObject.h">
+      <Filter>Class\IObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IObject\Enemy\Enemy.h">
+      <Filter>Class\IObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IObject\Bullet\Bullet.h">
+      <Filter>Class\IObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IObject\Player\Player.h">
+      <Filter>Class\IObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IScene\IScene.h">
+      <Filter>Class\IScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IScene\Title\Title.h">
+      <Filter>Class\IScene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IScene\Stage\Stage.h">
+      <Filter>Class\IScene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IScene\Clear\Clear.h">
+      <Filter>Class\IScene\Clear</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
