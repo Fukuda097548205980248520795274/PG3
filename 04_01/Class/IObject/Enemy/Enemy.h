@@ -9,7 +9,7 @@ public:
 
 	/// @brief コンストラクタ
 	/// @param position 
-	Enemy(Vector2 position) : IObject(position) {}
+	Enemy(Vector2 position);
 
 	/// @brief 更新処理
 	void Update() override;
@@ -38,10 +38,25 @@ private:
 
 private:
 
+	// 爆発フラグ
+	bool isExplosion_ = false;
+
+	// 爆発タイマー
+	float explosionTimer_ = 2.0f;
+
+
+private:
+
 	// 速度ベクトル
 	Vector2 velocity_ = Vector2(2.0f, 0.0f);
 
 	// 半径
 	const float kRadius = 16.0f;
+
+
+private:
+
+	// 爆発テクスチャ
+	int ghExplosion_ = 0;
 };
 
