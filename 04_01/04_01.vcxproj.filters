@@ -41,6 +41,18 @@
     <Filter Include="Class\IScene\Clear">
       <UniqueIdentifier>{6541ac5c-f7d9-4c9a-93ac-4be3584d5ca5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{88b483fb-484d-4c65-a7d8-db48a3f27e75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math\Vector2">
+      <UniqueIdentifier>{26529a0b-a659-45a6-9c66-7e19ab8a998c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\GameManager">
+      <UniqueIdentifier>{28c6a814-1fe1-4309-93ac-fefdf51cd453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\InputManager">
+      <UniqueIdentifier>{bbf9c0bc-b224-462d-b1c2-5a2bc7b0f683}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -70,6 +82,15 @@
     </ClCompile>
     <ClCompile Include="Class\IScene\Clear\Clear.cpp">
       <Filter>Class\IScene\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2\Vector2.cpp">
+      <Filter>Math\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\GameManager\GameManager.cpp">
+      <Filter>Class\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\InputManager\InputManager.cpp">
+      <Filter>Class\InputManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +198,15 @@
     </ClInclude>
     <ClInclude Include="Class\IScene\Clear\Clear.h">
       <Filter>Class\IScene\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2\Vector2.h">
+      <Filter>Math\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\GameManager\GameManager.h">
+      <Filter>Class\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\InputManager\InputManager.h">
+      <Filter>Class\InputManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
