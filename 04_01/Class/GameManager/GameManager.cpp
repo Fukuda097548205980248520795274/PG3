@@ -7,17 +7,13 @@
 
 GameManager::GameManager()
 {
-	// シーンの生成と初期化
-	sceneArr_[static_cast<size_t>(SCENE::TITLE)] = std::make_unique<Title>();
-	sceneArr_[static_cast<size_t>(SCENE::STAGE)] = std::make_unique<Stage>();
-	sceneArr_[static_cast<size_t>(SCENE::CLEAR)] = std::make_unique<Clear>();
+	// タイトルシーンの生成と初期化
+	scene_ = std::make_unique<Title>();
+	scene_->Initialize();
 
 	// 初期シーンの設定
 	currentScene_ = SCENE::TITLE;
 	prevScene_ = SCENE::TITLE;
-
-	// シーンの初期化
-	sceneArr_[static_cast<size_t>(currentScene_)]->Initialize();
 }
 
 /// @brief 実行
@@ -38,19 +34,39 @@ int GameManager::Run()
 
 		// シーンのチェック
 		prevScene_ = currentScene_;
-		currentScene_ = sceneArr_[static_cast<size_t>(currentScene_)]->GetSceneNo();
+		currentScene_ = scene_->GetSceneNo();
 
-		// シーンの切り替わりで初期化する
+		// シーンの切り替わりで生成、初期化する
 		if (currentScene_ != prevScene_)
 		{
-			sceneArr_[static_cast<size_t>(currentScene_)]->Initialize();
+			switch (currentScene_)
+			{
+			case SCENE::TITLE:
+			default:
+				// タイトルシーン
+				scene_ = std::make_unique<Title>();
+				break;
+
+			case SCENE::STAGE:
+				// ステージシーン
+				scene_ = std::make_unique<Stage>();
+				break;
+
+			case SCENE::CLEAR:
+				// クリアシーン
+				scene_ = std::make_unique<Clear>();
+				break;
+			}
+
+			// シーンの初期化
+			scene_->Initialize();
 		}
 
 		// 更新処理
-		sceneArr_[static_cast<size_t>(currentScene_)]->Update();
+		scene_->Update();
 
 		// 描画処理
-		sceneArr_[static_cast<size_t>(currentScene_)]->Draw();
+		scene_->Draw();
 
 		// フレームの終了
 		Novice::EndFrame();

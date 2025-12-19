@@ -39,3 +39,10 @@ void Bullet::Shot(const Vector2& position)
 	// 位置
 	position_ = position;
 }
+
+/// @brief 衝突応答処理
+/// @param enemy 
+void Bullet::OnCollision()
+{
+	isShot_ = false;
+}

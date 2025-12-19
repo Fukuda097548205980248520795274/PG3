@@ -20,7 +20,7 @@ public:
 private:
 
 	// シーン
-	std::unique_ptr<IScene> sceneArr_[3];
+	std::unique_ptr<IScene> scene_ = nullptr;
 
 	// 現在のシーン
 	SCENE currentScene_;

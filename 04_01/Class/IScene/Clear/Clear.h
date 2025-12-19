@@ -13,5 +13,11 @@ public:
 
 	/// @brief 描画処理
 	void Draw() override;
+
+
+private:
+
+	/// @brief タイトルシーンに遷移する
+	void TransitionTitle();
 };
 

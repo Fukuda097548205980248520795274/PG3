@@ -32,6 +32,24 @@ void Stage::Update()
 
 	// 入力の判定
 	inputManager_->InputCheck();
+
+
+	if (!enemy_->IsFinished())
+	{
+		if (bullet_->GetRadius() + enemy_->GetRadius() >=
+			(bullet_->GetPosition() - enemy_->GetPosition()).Length())
+		{
+			bullet_->OnCollision();
+			enemy_->OnCollision();
+		}
+	}
+
+
+	// 敵が終了したら、クリアシーンに移る
+	if (enemy_->IsFinished())
+	{
+		sceneNo = SCENE::CLEAR;
+	}
 }
 
 /// @brief 描画処理
@@ -45,4 +63,6 @@ void Stage::Draw()
 
 	// 敵の描画
 	enemy_->Draw();
+
+	Novice::ScreenPrintf(0, 0, "Stage_Scene");
 }

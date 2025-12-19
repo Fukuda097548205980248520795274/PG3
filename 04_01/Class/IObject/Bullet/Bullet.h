@@ -1,6 +1,8 @@
 #pragma once
 #include "../IObject.h"
 
+class Enemy;
+
 class Bullet : public IObject
 {
 public:
@@ -17,6 +19,15 @@ public:
 	/// @brief 発射
 	/// @param position 位置
 	void Shot(const Vector2& position);
+
+	/// @brief 半径を取得する
+	/// @return 
+	float GetRadius()const { return kRadius; }
+
+
+	/// @brief 衝突応答処理
+	/// @param enemy 
+	void OnCollision();
 
 
 private:

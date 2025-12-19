@@ -18,6 +18,10 @@ public:
 	/// @brief 描画処理
 	virtual void Draw() = 0;
 
+	/// @brief 位置を取得する
+	/// @return 
+	Vector2 GetPosition()const { return position_; }
+
 
 protected:
 

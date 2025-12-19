@@ -3,7 +3,14 @@
 /// @brief 初期化
 void Clear::Initialize()
 {
+	// キーと処理
+	using KeyAction = InputManager::KeyAction;
 
+	// スペースキーでステージシーンに遷移
+	inputManager_->RegistKeyEvent(DIK_SPACE, KeyAction{ {},[&]() {TransitionTitle(); } });
+
+
+	inputManager_->Update();
 }
 
 /// @brief 更新処理
@@ -20,5 +27,11 @@ void Clear::Update()
 /// @brief 描画処理
 void Clear::Draw()
 {
+	Novice::ScreenPrintf(0, 0, "Clear_Scene");
+}
 
+/// @brief タイトルシーンに遷移する
+void Clear::TransitionTitle()
+{
+	sceneNo = SCENE::TITLE;
 }

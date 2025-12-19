@@ -1,6 +1,7 @@
 #include "Enemy.h"
 
 #include <Novice.h>
+#include "../Bullet/Bullet.h"
 
 /// @brief 更新処理
 void Enemy::Update()
@@ -17,4 +18,11 @@ void Enemy::Draw()
 {
 	Novice::DrawEllipse(static_cast<int>(position_.x), static_cast<int>(position_.y),
 		static_cast<int>(kRadius), static_cast<int>(kRadius), 0.0f, 0xFFFFFFFF, kFillModeSolid);
+}
+
+/// @brief 衝突応答処理
+/// @param bullet 
+void Enemy::OnCollision()
+{
+	isFinished_ = true;
 }
