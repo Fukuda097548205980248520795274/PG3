@@ -7,6 +7,10 @@ void InputManager::Update()
 	// キー入力を受け取る
 	memcpy(preKeys_, keys_, 256);
 	Novice::GetHitKeyStateAll(keys_);
+
+	// タイマーを進める
+	disableTimer_ -= 1;
+	disableTimer_ = std::max(disableTimer_, 0);
 }
 
 /// @brief キーとその処理を登録する
@@ -20,6 +24,9 @@ void InputManager::RegistKeyEvent(BYTE key, KeyAction action)
 /// @brief 入力判定
 void InputManager::InputCheck()
 {
+	// タイマーが終了するまで処理しない
+	if (disableTimer_ > 0)return;
+
 	for (auto& [key, event] : keyEvents_)
 	{
 		// プレス

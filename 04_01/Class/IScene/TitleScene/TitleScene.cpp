@@ -1,17 +1,17 @@
-#include "Title.h"
+#include "TitleScene.h"
 
 /// @brief 初期化
-void Title::Initialize()
+void TitleScene::Initialize()
 {
 	// キーと処理
 	using KeyAction = InputManager::KeyAction;
 
 	// スペースキーでステージシーンに遷移
-	inputManager_->RegistKeyEvent(DIK_SPACE, KeyAction{ {},[&]() {TransitionGameStage(); } });
+	inputManager_->RegistKeyEvent(DIK_SPACE, KeyAction{ {},[&]() {TransitionStage(); } });
 }
 
 /// @brief 更新処理
-void Title::Update()
+void TitleScene::Update()
 {
 	// 入力マネージャの更新
 	inputManager_->Update();
@@ -22,14 +22,14 @@ void Title::Update()
 }
 
 /// @brief 描画処理
-void Title::Draw()
+void TitleScene::Draw()
 {
 	Novice::ScreenPrintf(0, 0, "Title_Scene");
 }
 
 
 /// @brief ステージシーンに遷移する
-void Title::TransitionGameStage()
+void TitleScene::TransitionStage()
 {
 	sceneNo = SCENE::STAGE;
 }

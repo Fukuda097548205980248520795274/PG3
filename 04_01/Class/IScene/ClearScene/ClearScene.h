@@ -1,7 +1,7 @@
 #pragma once
 #include "../IScene.h"
 
-class Clear : public IScene
+class ClearScene : public IScene
 {
 public:
 

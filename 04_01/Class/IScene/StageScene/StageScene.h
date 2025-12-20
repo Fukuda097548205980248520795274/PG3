@@ -5,8 +5,9 @@
 #include "../../IObject/Player/Player.h"
 #include "../../IObject/Bullet/Bullet.h"
 #include "../../IObject/Enemy/Enemy.h"
+#include "../../IObject/Bg/Bg.h"
 
-class Stage : public IScene
+class StageScene : public IScene
 {
 public:
 
@@ -30,5 +31,11 @@ private:
 
 	// 敵
 	std::unique_ptr<Enemy> enemy_ = nullptr;
+
+
+private:
+
+	// 背景
+	std::unique_ptr<Bg> bg_ = nullptr;
 };
 

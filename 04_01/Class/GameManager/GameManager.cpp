@@ -1,14 +1,14 @@
 #include "GameManager.h"
 #include <Novice.h>
 
-#include "../IScene/Title/Title.h"
-#include "../IScene/Stage/Stage.h"
-#include "../IScene/Clear/Clear.h"
+#include "../IScene/TitleScene/TitleScene.h"
+#include "../IScene/StageScene/StageScene.h"
+#include "../IScene/ClearScene/ClearScene.h"
 
 GameManager::GameManager()
 {
 	// タイトルシーンの生成と初期化
-	scene_ = std::make_unique<Title>();
+	scene_ = std::make_unique<TitleScene>();
 	scene_->Initialize();
 
 	// 初期シーンの設定
@@ -44,17 +44,17 @@ int GameManager::Run()
 			case SCENE::TITLE:
 			default:
 				// タイトルシーン
-				scene_ = std::make_unique<Title>();
+				scene_ = std::make_unique<TitleScene>();
 				break;
 
 			case SCENE::STAGE:
 				// ステージシーン
-				scene_ = std::make_unique<Stage>();
+				scene_ = std::make_unique<StageScene>();
 				break;
 
 			case SCENE::CLEAR:
 				// クリアシーン
-				scene_ = std::make_unique<Clear>();
+				scene_ = std::make_unique<ClearScene>();
 				break;
 			}
 

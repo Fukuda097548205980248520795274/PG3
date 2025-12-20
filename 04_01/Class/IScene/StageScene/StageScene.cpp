@@ -1,7 +1,7 @@
-#include "Stage.h"
+#include "StageScene.h"
 
 /// @brief 初期化
-void Stage::Initialize()
+void StageScene::Initialize()
 {
 	// 弾の生成と初期化
 	bullet_ = std::make_unique<Bullet>();
@@ -13,10 +13,13 @@ void Stage::Initialize()
 
 	// 敵の生成と初期化
 	enemy_ = std::make_unique<Enemy>(Vector2(640.0f, 40.0f));
+
+	// 背景の生成
+	bg_ = std::make_unique<Bg>("./Resources/bg.png");
 }
 
 /// @brief 更新処理
-void Stage::Update()
+void StageScene::Update()
 {
 	// 入力マネージャの更新
 	inputManager_->Update();
@@ -29,6 +32,9 @@ void Stage::Update()
 
 	// 敵の更新処理
 	enemy_->Update();
+
+	// 背景の更新処理
+	bg_->Update();
 
 	// 入力の判定
 	inputManager_->InputCheck();
@@ -53,8 +59,11 @@ void Stage::Update()
 }
 
 /// @brief 描画処理
-void Stage::Draw()
+void StageScene::Draw()
 {
+	// 背景の描画
+	bg_->Draw();
+
 	// 弾の描画
 	bullet_->Draw();
 

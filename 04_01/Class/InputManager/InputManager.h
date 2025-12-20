@@ -1,4 +1,5 @@
 #pragma once
+#define NOMINMAX
 #include <Novice.h>
 #include <unordered_map>
 #include <functional>
@@ -39,5 +40,11 @@ private:
 
 	// キーと処理の紐づけ
 	std::unordered_map<BYTE, KeyAction> keyEvents_;
+
+
+private:
+
+	// 無効タイマー
+	int32_t disableTimer_ = 2;
 };
 

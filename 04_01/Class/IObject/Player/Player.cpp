@@ -39,7 +39,7 @@ void Player::InputOption(InputManager* input)
 	input->RegistKeyEvent(DIK_A, KeyAction{ [&]() {MoveLeft(); } });
 	input->RegistKeyEvent(DIK_S, KeyAction{ [&]() {MoveDown(); } });
 	input->RegistKeyEvent(DIK_D, KeyAction{ [&]() {MoveRight(); } });
-	input->RegistKeyEvent(DIK_SPACE, KeyAction{ [&]() {Shot(); } });
+	input->RegistKeyEvent(DIK_SPACE, KeyAction{ {}, [&]() {Shot(); } });
 }
 
 

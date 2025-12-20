@@ -1,7 +1,7 @@
-#include "Clear.h"
+#include "ClearScene.h"
 
 /// @brief 初期化
-void Clear::Initialize()
+void ClearScene::Initialize()
 {
 	// キーと処理
 	using KeyAction = InputManager::KeyAction;
@@ -14,7 +14,7 @@ void Clear::Initialize()
 }
 
 /// @brief 更新処理
-void Clear::Update()
+void ClearScene::Update()
 {
 	// 入力マネージャの更新
 	inputManager_->Update();
@@ -25,13 +25,13 @@ void Clear::Update()
 }
 
 /// @brief 描画処理
-void Clear::Draw()
+void ClearScene::Draw()
 {
 	Novice::ScreenPrintf(0, 0, "Clear_Scene");
 }
 
 /// @brief タイトルシーンに遷移する
-void Clear::TransitionTitle()
+void ClearScene::TransitionTitle()
 {
 	sceneNo = SCENE::TITLE;
 }

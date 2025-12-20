@@ -1,7 +1,7 @@
 #pragma once
 #include "../IScene.h"
 
-class Title : public IScene
+class TitleScene : public IScene
 {
 public:
 
@@ -18,6 +18,6 @@ public:
 private:
 
 	/// @brief ステージシーンに遷移する
-	void TransitionGameStage();
+	void TransitionStage();
 };
 
