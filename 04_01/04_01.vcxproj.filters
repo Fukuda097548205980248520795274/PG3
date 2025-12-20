@@ -32,14 +32,29 @@
     <Filter Include="Class\IObject\Bullet">
       <UniqueIdentifier>{f4cad94f-919a-4a47-b24c-63389c66d4c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\IScene\Title">
-      <UniqueIdentifier>{6a067529-62b4-4393-bbca-706c08eb7f22}</UniqueIdentifier>
+    <Filter Include="Math">
+      <UniqueIdentifier>{88b483fb-484d-4c65-a7d8-db48a3f27e75}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\IScene\Stage">
+    <Filter Include="Math\Vector2">
+      <UniqueIdentifier>{26529a0b-a659-45a6-9c66-7e19ab8a998c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\GameManager">
+      <UniqueIdentifier>{28c6a814-1fe1-4309-93ac-fefdf51cd453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\InputManager">
+      <UniqueIdentifier>{bbf9c0bc-b224-462d-b1c2-5a2bc7b0f683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene\ClearScene">
+      <UniqueIdentifier>{6541ac5c-f7d9-4c9a-93ac-4be3584d5ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IScene\StageScene">
       <UniqueIdentifier>{8c93bf3b-2b9f-4d47-9885-76099303d23c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\IScene\Clear">
-      <UniqueIdentifier>{6541ac5c-f7d9-4c9a-93ac-4be3584d5ca5}</UniqueIdentifier>
+    <Filter Include="Class\IScene\TitleScene">
+      <UniqueIdentifier>{6a067529-62b4-4393-bbca-706c08eb7f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IObject\Bg">
+      <UniqueIdentifier>{0d0058fd-14ed-4d85-b9c6-b97bd7f8684a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -62,14 +77,26 @@
     <ClCompile Include="Class\IScene\IScene.cpp">
       <Filter>Class\IScene</Filter>
     </ClCompile>
-    <ClCompile Include="Class\IScene\Title\Title.cpp">
-      <Filter>Class\IScene\Title</Filter>
+    <ClCompile Include="Class\IScene\TitleScene\TitleScene.cpp">
+      <Filter>Class\IScene\TitleScene</Filter>
     </ClCompile>
-    <ClCompile Include="Class\IScene\Stage\Stage.cpp">
-      <Filter>Class\IScene\Stage</Filter>
+    <ClCompile Include="Class\IScene\StageScene\StageScene.cpp">
+      <Filter>Class\IScene\StageScene</Filter>
     </ClCompile>
-    <ClCompile Include="Class\IScene\Clear\Clear.cpp">
-      <Filter>Class\IScene\Clear</Filter>
+    <ClCompile Include="Class\IScene\ClearScene\ClearScene.cpp">
+      <Filter>Class\IScene\ClearScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2\Vector2.cpp">
+      <Filter>Math\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\GameManager\GameManager.cpp">
+      <Filter>Class\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\InputManager\InputManager.cpp">
+      <Filter>Class\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IObject\Bg\Bg.cpp">
+      <Filter>Class\IObject\Bg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,14 +196,26 @@
     <ClInclude Include="Class\IScene\IScene.h">
       <Filter>Class\IScene</Filter>
     </ClInclude>
-    <ClInclude Include="Class\IScene\Title\Title.h">
-      <Filter>Class\IScene\Title</Filter>
+    <ClInclude Include="Class\IScene\TitleScene\TitleScene.h">
+      <Filter>Class\IScene\TitleScene</Filter>
     </ClInclude>
-    <ClInclude Include="Class\IScene\Stage\Stage.h">
-      <Filter>Class\IScene\Stage</Filter>
+    <ClInclude Include="Class\IScene\StageScene\StageScene.h">
+      <Filter>Class\IScene\StageScene</Filter>
     </ClInclude>
-    <ClInclude Include="Class\IScene\Clear\Clear.h">
-      <Filter>Class\IScene\Clear</Filter>
+    <ClInclude Include="Class\IScene\ClearScene\ClearScene.h">
+      <Filter>Class\IScene\ClearScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2\Vector2.h">
+      <Filter>Math\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\GameManager\GameManager.h">
+      <Filter>Class\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\InputManager\InputManager.h">
+      <Filter>Class\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IObject\Bg\Bg.h">
+      <Filter>Class\IObject\Bg</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
