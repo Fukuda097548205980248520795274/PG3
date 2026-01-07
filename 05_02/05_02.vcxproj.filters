@@ -38,6 +38,15 @@
     <Filter Include="Class\ICommand">
       <UniqueIdentifier>{3467d1e9-ff20-44d4-9575-c6447703b2e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\InputHandler">
+      <UniqueIdentifier>{bbb143ad-d2bf-4627-a7ff-b4b72b301105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{1c49cbff-b30d-451f-8bef-d8405decbf05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math\Vector2Int">
+      <UniqueIdentifier>{babdb27e-2f85-4e40-9159-2c954396c46d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -64,6 +73,12 @@
     </ClCompile>
     <ClCompile Include="Class\ICommand\ICommand.cpp">
       <Filter>Class\ICommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\InputHandler\InputHandler.cpp">
+      <Filter>Class\InputHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector2Int\Vector2Int.cpp">
+      <Filter>Math\Vector2Int</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +183,12 @@
     </ClInclude>
     <ClInclude Include="Class\ICommand\ICommand.h">
       <Filter>Class\ICommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\InputHandler\InputHandler.h">
+      <Filter>Class\InputHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2Int\Vector2Int.h">
+      <Filter>Math\Vector2Int</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -162,12 +162,14 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
     <ClCompile Include="Class\GameManager\GameManager.cpp" />
     <ClCompile Include="Class\ICommand\ICommand.cpp" />
+    <ClCompile Include="Class\InputHandler\InputHandler.cpp" />
     <ClCompile Include="Class\IObject\IObject.cpp" />
     <ClCompile Include="Class\IObject\Selecter\Selecter.cpp" />
     <ClCompile Include="Class\IObject\Unit\Unit.cpp" />
     <ClCompile Include="Class\IScene\IScene.cpp" />
     <ClCompile Include="Class\IScene\StageScene\StageScene.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Math\Vector2Int\Vector2Int.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DirectXGame\3d\Camera.h" />
@@ -199,11 +201,13 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="Class\GameManager\GameManager.h" />
     <ClInclude Include="Class\ICommand\ICommand.h" />
+    <ClInclude Include="Class\InputHandler\InputHandler.h" />
     <ClInclude Include="Class\IObject\IObject.h" />
     <ClInclude Include="Class\IObject\Selecter\Selecter.h" />
     <ClInclude Include="Class\IObject\Unit\Unit.h" />
     <ClInclude Include="Class\IScene\IScene.h" />
     <ClInclude Include="Class\IScene\StageScene\StageScene.h" />
+    <ClInclude Include="Math\Vector2Int\Vector2Int.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
