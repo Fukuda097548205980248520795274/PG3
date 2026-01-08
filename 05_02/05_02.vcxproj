@@ -163,8 +163,10 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="Class\GameManager\GameManager.cpp" />
     <ClCompile Include="Class\IScene\IScene.cpp" />
     <ClCompile Include="Class\IScene\StageScene\StageScene.cpp" />
+    <ClCompile Include="Class\IStageSceneCommand\IStageSceneCommand.cpp" />
+    <ClCompile Include="Class\Selector\Selector.cpp" />
+    <ClCompile Include="Class\Unit\Unit.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Math\Vector2Int\Vector2Int.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DirectXGame\3d\Camera.h" />
@@ -197,7 +199,9 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="Class\GameManager\GameManager.h" />
     <ClInclude Include="Class\IScene\IScene.h" />
     <ClInclude Include="Class\IScene\StageScene\StageScene.h" />
-    <ClInclude Include="Math\Vector2Int\Vector2Int.h" />
+    <ClInclude Include="Class\IStageSceneCommand\IStageSceneCommand.h" />
+    <ClInclude Include="Class\Selector\Selector.h" />
+    <ClInclude Include="Class\Unit\Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

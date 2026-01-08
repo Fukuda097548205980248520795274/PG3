@@ -26,11 +26,14 @@
     <Filter Include="Class\IScene\StageScene">
       <UniqueIdentifier>{a268b740-3c01-49fe-953d-9598151e7de9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Math">
-      <UniqueIdentifier>{1c49cbff-b30d-451f-8bef-d8405decbf05}</UniqueIdentifier>
+    <Filter Include="Class\IStageSceneCommand">
+      <UniqueIdentifier>{cad70ad3-6d2a-4ce7-9e39-0d72cbe9a8b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Math\Vector2Int">
-      <UniqueIdentifier>{babdb27e-2f85-4e40-9159-2c954396c46d}</UniqueIdentifier>
+    <Filter Include="Class\Unit">
+      <UniqueIdentifier>{74a47740-bd92-4d59-bd9a-e97fa451c931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\Selector">
+      <UniqueIdentifier>{48e4f786-2ef1-4521-8d58-ddf856ece6e7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -47,8 +50,14 @@
     <ClCompile Include="Class\IScene\StageScene\StageScene.cpp">
       <Filter>Class\IScene\StageScene</Filter>
     </ClCompile>
-    <ClCompile Include="Math\Vector2Int\Vector2Int.cpp">
-      <Filter>Math\Vector2Int</Filter>
+    <ClCompile Include="Class\IStageSceneCommand\IStageSceneCommand.cpp">
+      <Filter>Class\IStageSceneCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Selector\Selector.cpp">
+      <Filter>Class\Selector</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\Unit\Unit.cpp">
+      <Filter>Class\Unit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,8 +151,14 @@
     <ClInclude Include="Class\IScene\StageScene\StageScene.h">
       <Filter>Class\IScene\StageScene</Filter>
     </ClInclude>
-    <ClInclude Include="Math\Vector2Int\Vector2Int.h">
-      <Filter>Math\Vector2Int</Filter>
+    <ClInclude Include="Class\IStageSceneCommand\IStageSceneCommand.h">
+      <Filter>Class\IStageSceneCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Selector\Selector.h">
+      <Filter>Class\Selector</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\Unit\Unit.h">
+      <Filter>Class\Unit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

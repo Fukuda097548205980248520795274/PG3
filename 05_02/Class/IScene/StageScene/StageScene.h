@@ -2,6 +2,8 @@
 #include "../IScene.h"
 #include <memory>
 
+#include "../../Selector/Selector.h"
+
 class StageScene : public IScene
 {
 public:
@@ -14,5 +16,11 @@ public:
 
 	/// @brief 描画処理
 	void Draw() override;
+
+
+private:
+
+	// セレクター
+	std::unique_ptr<Selector> selector_ = nullptr;
 };
 
