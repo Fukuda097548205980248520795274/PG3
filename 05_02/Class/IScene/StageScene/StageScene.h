@@ -1,5 +1,9 @@
 #pragma once
 #include "../IScene.h"
+#include <memory>
+
+#include "../../IObject/Grid/Grid.h"
+#include "../../IObject/Selecter/Selecter.h"
 
 class StageScene : public IScene
 {
@@ -17,6 +21,10 @@ public:
 
 private:
 
+	// グリッド
+	std::unique_ptr<Grid> grid_ = nullptr;
 
+	// セレクター
+	std::unique_ptr<Selector> selector_ = nullptr;
 };
 

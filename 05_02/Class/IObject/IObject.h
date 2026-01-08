@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
+#include "../../Math/Vector2Int/Vector2Int.h"
 
 class IObject
 {
 public:
 
-	/// @brief 更新処理
-	virtual void Update() = 0;
+	/// @brief 仮想コンストラクタ
+	virtual ~IObject() = default;
 
 	/// @brief 描画処理
 	virtual void Draw() = 0;
