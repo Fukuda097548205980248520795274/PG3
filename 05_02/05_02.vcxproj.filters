@@ -26,21 +26,6 @@
     <Filter Include="Class\IScene\StageScene">
       <UniqueIdentifier>{a268b740-3c01-49fe-953d-9598151e7de9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Class\IObject">
-      <UniqueIdentifier>{2d52e271-d599-47c7-ac5f-15158fde1120}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Class\IObject\Unit">
-      <UniqueIdentifier>{4ed6b9cf-1f79-484a-b7ef-fad6a39020e0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Class\IObject\Selecter">
-      <UniqueIdentifier>{1f2b81b6-02bf-4e20-92a7-226bcdd04b96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Class\ICommand">
-      <UniqueIdentifier>{3467d1e9-ff20-44d4-9575-c6447703b2e3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Class\InputHandler">
-      <UniqueIdentifier>{bbb143ad-d2bf-4627-a7ff-b4b72b301105}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Math">
       <UniqueIdentifier>{1c49cbff-b30d-451f-8bef-d8405decbf05}</UniqueIdentifier>
     </Filter>
@@ -61,21 +46,6 @@
     </ClCompile>
     <ClCompile Include="Class\IScene\StageScene\StageScene.cpp">
       <Filter>Class\IScene\StageScene</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\IObject\IObject.cpp">
-      <Filter>Class\IObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\IObject\Selecter\Selecter.cpp">
-      <Filter>Class\IObject\Selecter</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\IObject\Unit\Unit.cpp">
-      <Filter>Class\IObject\Unit</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\ICommand\ICommand.cpp">
-      <Filter>Class\ICommand</Filter>
-    </ClCompile>
-    <ClCompile Include="Class\InputHandler\InputHandler.cpp">
-      <Filter>Class\InputHandler</Filter>
     </ClCompile>
     <ClCompile Include="Math\Vector2Int\Vector2Int.cpp">
       <Filter>Math\Vector2Int</Filter>
@@ -171,21 +141,6 @@
     </ClInclude>
     <ClInclude Include="Class\IScene\StageScene\StageScene.h">
       <Filter>Class\IScene\StageScene</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\IObject\IObject.h">
-      <Filter>Class\IObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\IObject\Selecter\Selecter.h">
-      <Filter>Class\IObject\Selecter</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\IObject\Unit\Unit.h">
-      <Filter>Class\IObject\Unit</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\ICommand\ICommand.h">
-      <Filter>Class\ICommand</Filter>
-    </ClInclude>
-    <ClInclude Include="Class\InputHandler\InputHandler.h">
-      <Filter>Class\InputHandler</Filter>
     </ClInclude>
     <ClInclude Include="Math\Vector2Int\Vector2Int.h">
       <Filter>Math\Vector2Int</Filter>

@@ -34,7 +34,7 @@ int GameManager::Run()
 		Novice::GetHitKeyStateAll(keys);
 
 		// シーンの更新処理
-		scene_->Update(keys, preKeys);
+		scene_->Update();
 
 		// シーンの描画処理
 		scene_->Draw();

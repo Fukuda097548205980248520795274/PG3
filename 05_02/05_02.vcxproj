@@ -161,16 +161,6 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\Adapter\Novice.cpp" />
     <ClCompile Include="Class\GameManager\GameManager.cpp" />
-    <ClCompile Include="Class\ICommand\ICommand.cpp" />
-    <ClCompile Include="Class\ICommand\MoveDown\MoveDown.cpp" />
-    <ClCompile Include="Class\ICommand\MoveLeft\MoveLeft.cpp" />
-    <ClCompile Include="Class\ICommand\MoveRight\MoveRight.cpp" />
-    <ClCompile Include="Class\ICommand\MoveUp\MoveUp.cpp" />
-    <ClCompile Include="Class\InputHandler\InputHandler.cpp" />
-    <ClCompile Include="Class\IObject\Grid\Grid.cpp" />
-    <ClCompile Include="Class\IObject\IObject.cpp" />
-    <ClCompile Include="Class\IObject\Selecter\Selecter.cpp" />
-    <ClCompile Include="Class\IObject\Unit\Unit.cpp" />
     <ClCompile Include="Class\IScene\IScene.cpp" />
     <ClCompile Include="Class\IScene\StageScene\StageScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -205,16 +195,6 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="C:\KamataEngine\DirectXGame\scene\GameScene.h" />
     <ClInclude Include="C:\KamataEngine\Adapter\Novice.h" />
     <ClInclude Include="Class\GameManager\GameManager.h" />
-    <ClInclude Include="Class\ICommand\ICommand.h" />
-    <ClInclude Include="Class\ICommand\MoveDown\MoveDown.h" />
-    <ClInclude Include="Class\ICommand\MoveLeft\MoveLeft.h" />
-    <ClInclude Include="Class\ICommand\MoveRight\MoveRight.h" />
-    <ClInclude Include="Class\ICommand\MoveUp\MoveUp.h" />
-    <ClInclude Include="Class\InputHandler\InputHandler.h" />
-    <ClInclude Include="Class\IObject\Grid\Grid.h" />
-    <ClInclude Include="Class\IObject\IObject.h" />
-    <ClInclude Include="Class\IObject\Selecter\Selecter.h" />
-    <ClInclude Include="Class\IObject\Unit\Unit.h" />
     <ClInclude Include="Class\IScene\IScene.h" />
     <ClInclude Include="Class\IScene\StageScene\StageScene.h" />
     <ClInclude Include="Math\Vector2Int\Vector2Int.h" />
