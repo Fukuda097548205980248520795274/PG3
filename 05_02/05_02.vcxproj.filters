@@ -35,6 +35,18 @@
     <Filter Include="Class\Selector">
       <UniqueIdentifier>{48e4f786-2ef1-4521-8d58-ddf856ece6e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\IStageSceneCommand\SelectorMoveCommand">
+      <UniqueIdentifier>{4778bee5-ab36-4ce9-aa29-7699e7e45be9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IStageSceneCommand\SelectUnitCommand">
+      <UniqueIdentifier>{6c239e4a-c2ec-43e1-8ab8-598dca0cf1cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IStageSceneCommand\UnitMoveCommand">
+      <UniqueIdentifier>{baabd7e4-e52d-4cb2-9d07-b84c128f5376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Class\IStageSceneCommand\UnitMoveEndCommand">
+      <UniqueIdentifier>{409b3b95-39a1-4bb3-9a1a-9a9b46d2e341}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -58,6 +70,18 @@
     </ClCompile>
     <ClCompile Include="Class\Unit\Unit.cpp">
       <Filter>Class\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IStageSceneCommand\UnitMoveEndCommand\UnitMoveEndCommand.cpp">
+      <Filter>Class\IStageSceneCommand\UnitMoveEndCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IStageSceneCommand\UnitMoveCommand\UnitMoveCommand.cpp">
+      <Filter>Class\IStageSceneCommand\UnitMoveCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IStageSceneCommand\SelectUnitCommand\SelectUnitCommand.cpp">
+      <Filter>Class\IStageSceneCommand\SelectUnitCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\IStageSceneCommand\SelectorMoveCommand\SelectorMoveCommand.cpp">
+      <Filter>Class\IStageSceneCommand\SelectorMoveCommand</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +183,18 @@
     </ClInclude>
     <ClInclude Include="Class\Unit\Unit.h">
       <Filter>Class\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IStageSceneCommand\UnitMoveEndCommand\UnitMoveEndCommand.h">
+      <Filter>Class\IStageSceneCommand\UnitMoveEndCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IStageSceneCommand\UnitMoveCommand\UnitMoveCommand.h">
+      <Filter>Class\IStageSceneCommand\UnitMoveCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IStageSceneCommand\SelectUnitCommand\SelectUnitCommand.h">
+      <Filter>Class\IStageSceneCommand\SelectUnitCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\IStageSceneCommand\SelectorMoveCommand\SelectorMoveCommand.h">
+      <Filter>Class\IStageSceneCommand\SelectorMoveCommand</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
