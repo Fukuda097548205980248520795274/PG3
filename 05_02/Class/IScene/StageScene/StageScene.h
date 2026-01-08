@@ -2,6 +2,7 @@
 #include "../IScene.h"
 #include <memory>
 
+#include "../../InputHandler/InputHandler.h"
 #include "../../IObject/Grid/Grid.h"
 #include "../../IObject/Selecter/Selecter.h"
 
@@ -13,13 +14,16 @@ public:
 	void Initialize() override;
 
 	/// @brief 更新処理
-	void Update() override;
+	void Update(const char* key, const char* preKey) override;
 
 	/// @brief 描画処理
 	void Draw() override;
 
 
 private:
+
+	// 入力ハンドラ
+	std::unique_ptr<InputHandler> inputHandler_ = nullptr;
 
 	// グリッド
 	std::unique_ptr<Grid> grid_ = nullptr;

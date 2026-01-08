@@ -12,7 +12,7 @@ Selector::Selector()
 void Selector::Draw()
 {
 	Novice::DrawBox(position_.x * size_, position_.y * size_,
-		position_.x * size_ + size_, position_.y * size_ + size_, 0.0f, 0xFF0000FF, kFillModeWireFrame);
+		size_, size_, 0.0f, 0xFF0000FF, kFillModeWireFrame);
 }
 
 
@@ -36,7 +36,7 @@ void Selector::MoveLeft()
 /// @brief 下に進む
 void Selector::MoveDown()
 {
-	if (position_.y >= kMoveRangeHeight)return;
+	if (position_.y >= kMoveRangeHeight - 1)return;
 
 	position_.y++;
 }
@@ -44,7 +44,7 @@ void Selector::MoveDown()
 /// @brief 右に進む
 void Selector::MoveRight()
 {
-	if (position_.x >= kMoveRangeWidth)return;
+	if (position_.x >= kMoveRangeWidth - 1)return;
 
 	position_.x++;
 }
