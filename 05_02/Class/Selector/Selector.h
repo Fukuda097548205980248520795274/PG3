@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <memory>
+#include <list>
 #include "../Unit/Unit.h"
 
 class Selector
@@ -30,6 +31,9 @@ public:
 	/// @brief ユニットを選択or解除
 	void SelectOrCancellationUnit();
 
+	/// @brief 巻き戻す
+	void Undo();
+
 
 private:
 
@@ -38,6 +42,19 @@ private:
 
 	/// @brief マップサイズ
 	int mapSize_ = 32;
+
+
+private:
+
+	// undo用カウンター
+	int undoCount_ = 0;
+
+	std::list<std::pair<int, int>> undoList_;
+
+	/// @brief undo用移動関数
+	/// @param x 
+	/// @param y 
+	void UndoMove(int x, int y);
 
 
 private:

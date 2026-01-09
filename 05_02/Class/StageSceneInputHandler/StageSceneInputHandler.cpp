@@ -16,6 +16,7 @@ void StageSceneInputHandler::Initialize(Selector* selector)
 	selectorMoveDown_ = std::make_unique<SelectorMoveCommand>(selector, 0, 1);
 	selectorMoveRight_ = std::make_unique<SelectorMoveCommand>(selector, 1, 0);
 	selectOrCancellationUnit_ = std::make_unique<SelectOrCancellationUnitUnitCommand>(selector);
+	undo_ = std::make_unique<UndoCommand>(selector);
 }
 
 IStageSceneCommand* StageSceneInputHandler::HandleInput(const char* keys, const char* preKeys)
@@ -45,6 +46,11 @@ IStageSceneCommand* StageSceneInputHandler::HandleInput(const char* keys, const 
 	if (keys[DIK_SPACE] && !preKeys[DIK_SPACE])
 	{
 		return selectOrCancellationUnit_.get();
+	}
+
+	if (keys[DIK_LCONTROL] && keys[DIK_Z] && !preKeys[DIK_Z])
+	{
+		return undo_.get();
 	}
 
 	return nullptr;

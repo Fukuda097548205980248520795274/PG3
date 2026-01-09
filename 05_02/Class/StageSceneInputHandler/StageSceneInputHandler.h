@@ -28,5 +28,7 @@ private:
 	std::unique_ptr<SelectorMoveCommand> selectorMoveRight_ = nullptr;
 
 	std::unique_ptr<SelectOrCancellationUnitUnitCommand> selectOrCancellationUnit_ = nullptr;
+
+	std::unique_ptr<UndoCommand> undo_ = nullptr;
 };
 

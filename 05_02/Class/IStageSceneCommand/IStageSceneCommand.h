@@ -58,3 +58,20 @@ private:
 	Selector* selector_ = nullptr;
 };
 
+class UndoCommand : public IStageSceneCommand
+{
+public:
+
+	/// @brief コンストラクタ
+	/// @param selector 
+	UndoCommand(Selector* selector) : selector_(selector) {}
+
+	/// @brief 実行
+	void Exec() override;
+
+
+private:
+
+	/// @brief セレクター
+	Selector* selector_ = nullptr;
+};

@@ -12,3 +12,9 @@ void SelectOrCancellationUnitUnitCommand::Exec()
 {
 	selector_->SelectOrCancellationUnit();
 }
+
+/// @brief 実行
+void UndoCommand::Exec()
+{
+	selector_->Undo();
+}

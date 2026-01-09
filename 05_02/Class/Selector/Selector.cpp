@@ -52,9 +52,27 @@ void Selector::Draw()
 /// @param y 
 void Selector::Move(int x, int y)
 {
+	if (mapX_ + x < 0 || mapX_ + x >= 40)return;
+	if (mapY_ + y < 0 || mapY_ + y >= 20)return;
+
 	// ユニットを選んでいるとき
 	if (selectedUnit_)
 	{
+		for (auto& unit : units_)
+		{
+			// 自分自身は無視
+			if (unit.get() == selectedUnit_)
+				continue;
+
+			// 移動先にユニットがいるときは移動しない
+			if (unit->GetMapX() == mapX_ + x && unit->GetMapY() == mapY_ + y)return;
+		}
+
+		// undoの回数をカウントする
+		std::pair<int, int> undo = { x, y };
+		undoList_.push_back(undo);
+		undoCount_++;
+
 		selectedUnit_->Move(x, y);
 	}
 
@@ -83,5 +101,41 @@ void Selector::SelectOrCancellationUnit()
 	{
 		// ユニットがあるときは解除選択
 		selectedUnit_ = nullptr;
+
+		// undoリストをクリアする
+		undoList_.clear();
+		undoCount_ = 0;
 	}
+}
+
+/// @brief 巻き戻す
+void Selector::Undo()
+{
+	if (!selectedUnit_)return;
+	if (undoCount_ <= 0)return;
+
+	std::pair<int, int> undo = undoList_.back();
+
+	// 移動を巻き戻す
+	UndoMove(-undo.first, -undo.second);
+
+	// ポップする
+	undoList_.pop_back();
+	undoCount_--;
+}
+
+/// @brief undo用移動関数
+/// @param x 
+/// @param y 
+void Selector::UndoMove(int x, int y)
+{
+	// ユニットを選んでいるとき
+	if (selectedUnit_)
+	{
+		selectedUnit_->Move(x, y);
+	}
+
+	// 移動
+	mapX_ += x;
+	mapY_ += y;
 }
