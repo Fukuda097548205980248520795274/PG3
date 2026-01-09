@@ -44,7 +44,16 @@ void Selector::Draw()
 	// ユニットの描画
 	for (auto& unit : units_)unit->Draw();
 
-	Novice::DrawBox(mapX_ * mapSize_, mapY_ * mapSize_, mapSize_, mapSize_, 0.0f, 0xFF0000FF, kFillModeWireFrame);
+	if (selectedUnit_)
+	{
+		// ユニットを選んでいるとき
+		Novice::DrawBox(mapX_ * mapSize_ + 4, mapY_ * mapSize_ + 4, 24, 24, 0.0f, 0xFFAAAAFF, kFillModeSolid);
+	}
+	else
+	{
+		// ユニットを選んでいないとき
+		Novice::DrawBox(mapX_ * mapSize_, mapY_ * mapSize_, mapSize_, mapSize_, 0.0f, 0xFF0000FF, kFillModeWireFrame);
+	}
 }
 
 /// @brief 移動
@@ -52,6 +61,7 @@ void Selector::Draw()
 /// @param y 
 void Selector::Move(int x, int y)
 {
+	// 範囲外に出ないようにする
 	if (mapX_ + x < 0 || mapX_ + x >= 40)return;
 	if (mapY_ + y < 0 || mapY_ + y >= 20)return;
 
@@ -111,9 +121,11 @@ void Selector::SelectOrCancellationUnit()
 /// @brief 巻き戻す
 void Selector::Undo()
 {
+	// 選んでいないとき undoがカウントされていないとき
 	if (!selectedUnit_)return;
 	if (undoCount_ <= 0)return;
 
+	// 最新の操作を取得する
 	std::pair<int, int> undo = undoList_.back();
 
 	// 移動を巻き戻す
@@ -129,7 +141,7 @@ void Selector::Undo()
 /// @param y 
 void Selector::UndoMove(int x, int y)
 {
-	// ユニットを選んでいるとき
+	// 選んでいるユニットを動かす
 	if (selectedUnit_)
 	{
 		selectedUnit_->Move(x, y);
