@@ -1,4 +1,5 @@
 #include "StageScene.h"
+#include <Novice.h>
 
 /// @brief 初期化
 void StageScene::Initialize()
@@ -18,6 +19,18 @@ void StageScene::Update()
 /// @brief 描画処理
 void StageScene::Draw()
 {
+	for (int i = 0; i <= 40; ++i)
+	{
+		Novice::DrawLine(i * 32, 0, i * 32, 640, 0xFFFFFFFF);
+	}
+
+	for (int i = 0; i <= 20; ++i)
+	{
+		Novice::DrawLine(0, i * 32, 1280, i * 32, 0xFFFFFFFF);
+	}
+
+	Novice::DrawBox(0, 640, 1280, 80, 0.0f, 0x000000FF, kFillModeSolid);
+
 	// セレクターの描画
 	selector_->Draw();
 }

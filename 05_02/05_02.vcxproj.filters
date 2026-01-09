@@ -47,6 +47,9 @@
     <Filter Include="Class\IStageSceneCommand\UnitMoveEndCommand">
       <UniqueIdentifier>{409b3b95-39a1-4bb3-9a1a-9a9b46d2e341}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Class\SelectSceneInputHandler">
+      <UniqueIdentifier>{f0777131-a9cb-43cf-8253-0d5033781b71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -82,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="Class\IStageSceneCommand\SelectorMoveCommand\SelectorMoveCommand.cpp">
       <Filter>Class\IStageSceneCommand\SelectorMoveCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="Class\SelectSceneInputHandler\SelectSceneInputHandler.cpp">
+      <Filter>Class\SelectSceneInputHandler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +201,9 @@
     </ClInclude>
     <ClInclude Include="Class\IStageSceneCommand\SelectorMoveCommand\SelectorMoveCommand.h">
       <Filter>Class\IStageSceneCommand\SelectorMoveCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="Class\SelectSceneInputHandler\SelectSceneInputHandler.h">
+      <Filter>Class\SelectSceneInputHandler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

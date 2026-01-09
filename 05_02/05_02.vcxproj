@@ -169,6 +169,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="Class\IStageSceneCommand\UnitMoveCommand\UnitMoveCommand.cpp" />
     <ClCompile Include="Class\IStageSceneCommand\UnitMoveEndCommand\UnitMoveEndCommand.cpp" />
     <ClCompile Include="Class\Selector\Selector.cpp" />
+    <ClCompile Include="Class\SelectSceneInputHandler\SelectSceneInputHandler.cpp" />
     <ClCompile Include="Class\Unit\Unit.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -209,6 +210,7 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="Class\IStageSceneCommand\UnitMoveCommand\UnitMoveCommand.h" />
     <ClInclude Include="Class\IStageSceneCommand\UnitMoveEndCommand\UnitMoveEndCommand.h" />
     <ClInclude Include="Class\Selector\Selector.h" />
+    <ClInclude Include="Class\SelectSceneInputHandler\SelectSceneInputHandler.h" />
     <ClInclude Include="Class\Unit\Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
