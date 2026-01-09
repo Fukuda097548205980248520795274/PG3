@@ -35,9 +35,6 @@ public:
 	/// @param y 
 	void Move(int x, int y);
 
-	/// @brief 移動をやめる
-	void MoveEnd();
-
 private:
 
 	int mapX_ = 0;
@@ -45,11 +42,5 @@ private:
 
 	/// @brief マップサイズ
 	int mapSize_ = 24;
-
-
-private:
-
-	/// @brief 選ばれたかどうか
-	bool isSelected_ = false;
 };
 

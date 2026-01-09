@@ -27,8 +27,8 @@ public:
 	/// @param y 
 	void Move(int x, int y);
 
-	/// @brief ユニットを選ぶ
-	void SelectUnit();
+	/// @brief ユニットを選択or解除
+	void SelectOrCancellationUnit();
 
 
 private:

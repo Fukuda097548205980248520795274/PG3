@@ -7,13 +7,24 @@ void StageScene::Initialize()
 	// セレクターの生成と初期化
 	selector_ = std::make_unique<Selector>(2, 2);
 	selector_->Initialize();
+
+	// 入力ハンドラの生成と初期化
+	inputHandler_ = std::make_unique<StageSceneInputHandler>();
+	inputHandler_->Initialize(selector_.get());	
 }
 
 /// @brief 更新処理
-void StageScene::Update()
+void StageScene::Update(const char* keys, const char* preKeys)
 {
 	// セレクターの更新
 	selector_->Update();
+
+	// 入力処理
+	IStageSceneCommand* command = inputHandler_->HandleInput(keys, preKeys);
+	if (command)
+	{
+		command->Exec();
+	}
 }
 
 /// @brief 描画処理

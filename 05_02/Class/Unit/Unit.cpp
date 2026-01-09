@@ -27,9 +27,3 @@ void Unit::Move(int x, int y)
 	mapX_ += x;
 	mapY_ += y;
 }
-
-/// @brief 移動をやめる
-void Unit::MoveEnd()
-{
-
-}

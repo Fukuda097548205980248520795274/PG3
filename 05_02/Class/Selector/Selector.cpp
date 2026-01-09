@@ -52,13 +52,36 @@ void Selector::Draw()
 /// @param y 
 void Selector::Move(int x, int y)
 {
+	// ユニットを選んでいるとき
+	if (selectedUnit_)
+	{
+		selectedUnit_->Move(x, y);
+	}
+
 	// 移動
 	mapX_ += x;
 	mapY_ += y;
 }
 
-/// @brief ユニットを選ぶ
-void Selector::SelectUnit()
+/// @brief ユニットを選択or解除
+void Selector::SelectOrCancellationUnit()
 {
-
+	// ユニットがないときは、選ぶ
+	if (selectedUnit_ == nullptr)
+	{
+		// セレクターと同じ場所のユニットを探す
+		for (auto& unit : units_)
+		{
+			if (mapX_ == unit->GetMapX() && mapY_ == unit->GetMapY())
+			{
+				selectedUnit_ = unit.get();
+				break;
+			}
+		}
+	}
+	else
+	{
+		// ユニットがあるときは解除選択
+		selectedUnit_ = nullptr;
+	}
 }

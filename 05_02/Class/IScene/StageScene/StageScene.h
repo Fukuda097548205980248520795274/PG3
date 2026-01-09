@@ -3,6 +3,7 @@
 #include <memory>
 
 #include "../../Selector/Selector.h"
+#include "../../StageSceneInputHandler/StageSceneInputHandler.h"
 
 class StageScene : public IScene
 {
@@ -12,7 +13,7 @@ public:
 	void Initialize() override;
 
 	/// @brief 更新処理
-	void Update() override;
+	void Update(const char* keys, const char* preKeys) override;
 
 	/// @brief 描画処理
 	void Draw() override;
@@ -22,5 +23,8 @@ private:
 
 	// セレクター
 	std::unique_ptr<Selector> selector_ = nullptr;
+
+	// 入力ハンドラ
+	std::unique_ptr<StageSceneInputHandler> inputHandler_ = nullptr;
 };
 
