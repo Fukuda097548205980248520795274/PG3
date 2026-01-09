@@ -42,6 +42,17 @@ void StageScene::Draw()
 
 	Novice::DrawBox(0, 640, 1280, 80, 0.0f, 0x000000FF, kFillModeSolid);
 
+	if (selector_->IsUnitMode())
+	{
+		Novice::ScreenPrintf(16, 656, "WASD || arrow Keys : move / space Key : change unit mode / ctrl + Z : undo");
+		Novice::ScreenPrintf(16, 688, "You have %d more 'UnDo' actions available.", selector_->GetUndoCount());
+	}
+	else
+	{
+		Novice::ScreenPrintf(16, 656, "WASD || arrow Keys : move / space Key : change unit mode");
+		Novice::ScreenPrintf(16, 688, "In Selector Mode, you cannot use the 'Undo' action.");
+	}
+
 	// セレクターの描画
 	selector_->Draw();
 }

@@ -23,6 +23,15 @@ public:
 	void Draw();
 
 
+	/// @brief ユニットモードかどうか
+	/// @return 
+	bool IsUnitMode()const { return selectedUnit_ != nullptr; }
+
+	/// @brief undoカウントを取得する
+	/// @return 
+	int GetUndoCount()const { return undoCount_; }
+
+
 	/// @brief 移動
 	/// @param x 
 	/// @param y 
